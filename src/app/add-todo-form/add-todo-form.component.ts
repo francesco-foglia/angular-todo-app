@@ -18,6 +18,8 @@ export class AddTodoFormComponent implements OnInit {
       desc: desc.value,
       priority: priority.value,
     };
+    desc.value = '';
+    priority.value = '';
     this.newTodo.emit(newTodo);
   }
 

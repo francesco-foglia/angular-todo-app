@@ -19,6 +19,10 @@ export class AppComponent {
     ];
   }
 
+  sortedTodos(): Todo[] {
+    return this.todos.sort((a: Todo, b: Todo) => a.priority > b.priority ? -1 : (a.priority < b.priority) ? 1 : 0);
+  }
+
   onAddTodo({ desc, priority }) {
     const newId = (this.todos.length + 1).toString();
     this.todos.push(new Todo(newId, desc, priority));
