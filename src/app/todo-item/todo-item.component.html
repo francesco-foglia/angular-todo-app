@@ -1,7 +1,14 @@
 <article class="message is-dark">
   <div class="message-body">
-    <p>{{todo.desc}}</p>
-    <p>Priorità: {{todo.priority}}</p>
-    <small>{{todo.date.toLocaleDateString()}}</small>
+    <p class="subtitle is-5">{{todo.desc}} ({{todo.priority}})</p>
+    <p>Completato: {{todo.completed}}</p>
+    <small>{{todo.date.toLocaleDateString()}}</small><br/><br/>
+    <button
+      *ngIf="!todo.completed"
+      class="button is-dark is-outlined is-small"
+      (click)="onCompleteTodo()"
+    >
+      Completa
+    </button>
   </div>
 </article>

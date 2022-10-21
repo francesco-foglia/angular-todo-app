@@ -27,4 +27,9 @@ export class AppComponent {
     const newId = (this.todos.length + 1).toString();
     this.todos.push(new Todo(newId, desc, priority));
   }
+
+  onCompleteTodo(id) {
+    const myTodo = this.todos.find(todo => todo.id === id);
+    myTodo.completed = true;
+  }
 }
