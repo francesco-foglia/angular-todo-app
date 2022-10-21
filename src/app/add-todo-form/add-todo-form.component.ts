@@ -12,4 +12,9 @@ export class AddTodoFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onAddTask(desc, priority) {
+    console.log('desc', desc.value);
+    console.log('priority', priority.value);
+  }
+
 }
