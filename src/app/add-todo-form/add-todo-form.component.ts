@@ -1,5 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {AddFormError} from './add-form-error.model';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AddFormError } from './add-form-error.model';
 
 @Component({
   selector: 'app-add-todo-form',
@@ -27,7 +27,7 @@ export class AddTodoFormComponent implements OnInit {
     return toRet;
   }
 
-  checkForm(desc, priority): void {
+  checkForm(desc: string, priority: any): void {
     if (desc === '') {
       this.formError.isError = true;
       this.formError.descError = true;

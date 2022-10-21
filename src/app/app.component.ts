@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Todo} from './todo-item/todo.model';
+import { Todo } from './todo-item/todo.model';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import {Todo} from './todo-item/todo.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  todos: Todo[];
+  todos!: Todo[];
 
   constructor() {
     this.todos = [
@@ -23,13 +23,13 @@ export class AppComponent {
     return this.todos.sort((a: Todo, b: Todo) => a.priority > b.priority ? -1 : (a.priority < b.priority) ? 1 : 0);
   }
 
-  onAddTodo({ desc, priority }) {
+  onAddTodo({ desc, priority }: { desc: string; priority: string }) {
     const newId = (this.todos.length + 1).toString();
     this.todos.push(new Todo(newId, desc, priority));
   }
 
-  onCompleteTodo(id) {
-    const myTodo = this.todos.find(todo => todo.id === id);
+  onCompleteTodo(id: any) {
+    const myTodo: any = this.todos.find(todo => todo.id === id);
     myTodo.completed = true;
   }
 }
