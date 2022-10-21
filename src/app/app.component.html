@@ -1,6 +1,6 @@
-<div class="container is-fluid">
+<div class="container">
   <div class="section">
-    <h1 class="title is-2">My App</h1>
+    <h1 class="title is-2">To Do App</h1>
     <app-add-todo-form (newTodo)="onAddTodo($event)"></app-add-todo-form>
     <app-todo-list [todos]="sortedTodos()" (completeTodo)="onCompleteTodo($event)"></app-todo-list>
   </div>

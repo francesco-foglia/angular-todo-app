@@ -1,10 +1,10 @@
-<div class="section">
+<div class="box">
   <h2 class="subtitle is-4">Aggiungi Task</h2>
   <form>
     <div class="field">
       <label class="label">Descrizione</label>
       <div class="control">
-        <input [className]="getInputClass()" type="text" placeholder="e.g Task 1" #desc>
+        <input [className]="getInputClass()" type="text" placeholder="e.g. Task 1" #desc>
       </div>
       <p class="help is-danger">{{formError.descErrorMsg}}</p>
     </div>
@@ -12,7 +12,7 @@
     <div class="field">
       <label class="label">Priorità</label>
       <div class="control">
-        <input [className]="getInputClass()" type="number" placeholder="e.g 2" #priority>
+        <input [className]="getInputClass()" type="number" placeholder="e.g. 2" #priority>
       </div>
       <p class="help is-danger">{{formError.priorityErrorMsg}}</p>
     </div>
